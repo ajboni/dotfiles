@@ -1,10 +1,18 @@
 fpath=($fpath "/home/baj/.zfunctions")
 
+# Home and End keys
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
+
 bindkey "\e[3~" delete-char
+bindkey "~5" delete-word
 
+# CTRL supr to delete next word
+bindkey '^[[3;5~' kill-word
 
+# CTRL + Arrows to move words
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 source ~/dev/dotfiles/powerlevel9k/powerlevel9k.zsh-theme
