@@ -1,3 +1,4 @@
+# Testing yadm
 fpath=($fpath "/home/baj/.zfunctions")
 
 # Home and End keys
