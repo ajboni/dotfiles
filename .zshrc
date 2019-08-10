@@ -16,7 +16,7 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
 POWERLEVEL9K_MODE='nerdfont-complete'
-source ~/dev/dotfiles/powerlevel9k/powerlevel9k.zsh-theme
+source ~/git/powerlevel9k/powerlevel9k.zsh-theme
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -29,6 +29,10 @@ alias lh='ls -lha'
 alias ll='exa -lg'
 alias lll='exa -lgG'
 alias lla='exa -lga'
+
+### Add all modifications to yadm
+alias yadmadd="yadm ls-files --modified | xargs yadm add"
+alias yadmcommit="yadmadd; yadm commit"
 
 # Prompts
 
